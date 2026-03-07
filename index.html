@@ -16,13 +16,14 @@
 
     <!-- style connection -->
     <link rel="stylesheet" href="./style/style.css">
+    
    
 </head>
 <body>
-    <header class="container w-3/12 mx-auto mt-[78px] shadow">
+    <header class="container w-4/12 mx-auto mt-[78px] shadow">
         <div class=" p-6">
             <div class="text-center">
-                <img class="mx-auto" src="./assets/github-logo.png" alt="">
+                <img class="mx-auto py-4" src="./assets/github-logo.png" alt="">
                 <h2 class="font-bold text-2xl">GitHub Issues Tracker</h2>
                 <p class="text-[#64748B] text-[16px]">Sign in to manage your issues</p>
             </div>
@@ -31,12 +32,14 @@
              <fieldset class="fieldset rounded-box  p-2">
 
                 <label class="label text-[14px]">Username</label>
-                <input type="text" class="input" placeholder="Enter Username" />
+                <input id="userName" type="text" class="input w-full" placeholder="Enter Username" />
 
                 <label class="label text-[14px]">Password</label>
-                <input type="password" class="input" placeholder="Password" />
+                <input id="passwordInput" type="password" class="input w-full" placeholder="Password" />
 
-                <button class="btn btn-primary mt-4">Sign In</button>
+                
+                    <button id="loginBtn" class="btn btn-primary mt-4 w-full">Sign In</button>
+              
 
                     <!-- hr-part -->
                 <div class="flex items-center gap-2 my-2">
@@ -52,7 +55,8 @@
                 </fieldset>
                 
         </div>
-        <div></div>
+        
     </header>
+    <script src="./script/script.js"></script>
 </body>
 </html>
