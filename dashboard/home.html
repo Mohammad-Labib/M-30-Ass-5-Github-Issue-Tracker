@@ -3,9 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+       <!-- tailwind + dasyUI -->
+     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- google font -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap"  rel="stylesheet">
+
+    <!-- font icon -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     
     <title>home page</title>
 </head>
 <body>
-    <h1>Hello Labib</h1>
+
+  <header>
+  <nav class="flex justify-between py-2 shadow p-10">
+    
+    <div class="flex items-center gap-2">
+      <img class="w-12" src="../assets/github-logo.png" alt="">
+      <h1 class="text-2xl font-bold">GitHub Issues Tracker</h1>
+    </div>
+
+    <div class="join gap-3">
+      <div class="flex items-center">
+        <label class="input validator join-item">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" placeholder="Search issues..." required />
+        </label>
+      </div>
+
+      <button class="btn btn-primary rounded font-bold">
+        <i class="fa-solid fa-plus"></i> New Issue
+      </button>
+    </div>
+
+  </nav>
+</header>
+
+    <!-- section part-1  -->
+    <section class="container mx-auto mt-10">
+        <div class="flex gap-4 shadow py-3 p-5">
+            <button class="btn btn-outline btn-primary w-[120px] h-[40px] text-[20px]">All</button>
+            <button class="btn btn-outline btn-primary w-[120px] h-[40px] text-[20px]">Open</button>
+            <button class="btn btn-outline btn-primary w-[120px] h-[40px] text-[20px]">Closed</button>
+        </div>
+
+   <div class="flex items-center justify-between shadow py-4 p-4 mt-4">
+
+  <div class="flex items-center gap-3">
+    <img class="w-10 shadow rounded" src="../assets/Aperture.png" alt="">
+
+    <div>
+      <h1 class="text-2xl font-bold">50 Issues</h1>
+      <p class="text-[#64748B]">Track and manage your project issues</p>
+    </div>
+
+  </div>
+
+  <div class="flex gap-3">
+    <input type="radio" class="radio radio-success" checked /><p>Open</p>
+    <input type="radio" class="radio radio-secondary" checked/><p>Close</p>
+  </div>
+
+</div>
+
+<!-- 2nd section -->
+<section class="container mx-auto mt-10">
+    <div>
+        <div id="level-container" class="flex gap-5 justify-center flex-wrap">
+            <!-- <h1>Hello Labib</h1> -->
+        </div>
+    </div>
+    
+    
+
+</section>
+<!-- card part -->
+<section class="container mx-auto my-10  grid grid-cols-4" id="card-container">
+    <div class="card bg-white shadow rounded p-4 space-y-2 border-t-4 border-emerald-500">
+        <div class="flex justify-between items-center ">
+            <img src="../assets/Open-Status.png" alt="">
+            <h1 class=" bg-[#FEECEC] rounded font-semibold w-[56px] text-center" >High</h1>
+        </div>
+        <div>
+            <h1 class="font-semibold text-[20px]">Fix navigation menu on mobile devices</h1>
+            <p class="text-[#64748B]">The navigation menu doesn't collapse properly on mobile devices...</p>
+        </div>
+        <div class="flex gap-2">
+            <h1 class="text-[#EF4444] bg-[#FEECEC] rounded font-semibold w-[56px] text-center">Bug</h1>
+            <h1 class="text-[#D97706] bg-[#FEECEC] rounded font-semibold w-[112px] text-center">help wanted</h1>
+            
+        </div>
+        <hr>
+        <div>
+            <h1 class="text-[#64748B]">#1 by john_doe</h1>
+            <p class="text-[#64748B]">1/15/2024</p>
+        </div>
+    </div>
+</section>
+
+
+    <script src="../script/home.js"></script>
 </body>
 </html>
