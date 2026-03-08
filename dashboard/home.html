@@ -47,11 +47,12 @@
     <!-- section part-1  -->
     <section class="container mx-auto mt-10">
         <div class="flex gap-4 shadow py-3 p-5">
-            <button class="btn btn-outline btn-primary w-[120px] h-[40px] text-[20px]">All</button>
-            <button class="btn btn-outline btn-primary w-[120px] h-[40px] text-[20px]">Open</button>
-            <button class="btn btn-outline btn-primary w-[120px] h-[40px] text-[20px]">Closed</button>
+            <button id="allBtn" class="btn btn-outline btn-primary w-[120px] h-[40px] text-[20px]">All</button>
+            <button id="openBtn" class="btn btn-outline btn-primary w-[120px] h-[40px] text-[20px]">Open</button>
+            <button id="close-Btn" class="btn btn-outline btn-primary w-[120px] h-[40px] text-[20px]">Closed</button>
+            <div id="btnContainer"></div>
         </div>
-
+     
    <div class="flex items-center justify-between shadow py-4 p-4 mt-4">
 
   <div class="flex items-center gap-3">
@@ -70,6 +71,7 @@
   </div>
 
 </div>
+</section>
 
 <!-- 2nd section -->
 <section class="container mx-auto mt-10">
@@ -83,8 +85,8 @@
 
 </section>
 <!-- card part -->
-<section class="container mx-auto my-10  grid grid-cols-4" id="card-container">
-    <div class="card bg-white shadow rounded p-4 space-y-2 border-t-4 border-emerald-500">
+<section class="container mx-auto my-10  grid grid-cols-4 gap-4" id="card-container">
+    <!-- <div class="card bg-white shadow rounded p-4 space-y-2 border-t-4 border-emerald-500">
         <div class="flex justify-between items-center ">
             <img src="../assets/Open-Status.png" alt="">
             <h1 class=" bg-[#FEECEC] rounded font-semibold w-[56px] text-center" >High</h1>
@@ -103,7 +105,7 @@
             <h1 class="text-[#64748B]">#1 by john_doe</h1>
             <p class="text-[#64748B]">1/15/2024</p>
         </div>
-    </div>
+    </div> -->
 </section>
 
 
