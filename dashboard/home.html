@@ -47,9 +47,9 @@
     <!-- section part-1  -->
     <section class="container mx-auto mt-10">
         <div class="flex gap-4 shadow py-3 p-5">
-            <button id="allBtn" class="btn btn-outline btn-primary w-[120px] h-[40px] text-[20px]">All</button>
-            <button id="openBtn" class="btn btn-outline btn-primary w-[120px] h-[40px] text-[20px]">Open</button>
-            <button id="close-Btn" class="btn btn-outline btn-primary w-[120px] h-[40px] text-[20px]">Closed</button>
+            <button id="allBtn" class="btn btn-outline btn-primary w-[120px] h-[40px] text-[20px] filter-btn">All</button>
+            <button id="openBtn" class="btn btn-outline btn-primary w-[120px] h-[40px] text-[20px] filter-btn">Open</button>
+            <button id="close-Btn" class="btn btn-outline btn-primary w-[120px] h-[40px] text-[20px] filter-btn">Closed</button>
             <div id="btnContainer"></div>
         </div>
      
@@ -59,7 +59,7 @@
     <img class="w-10 shadow rounded" src="../assets/Aperture.png" alt="">
 
     <div>
-      <h1 class="text-2xl font-bold">50 Issues</h1>
+      <h1 id="btnPart" class="text-2xl font-bold">50 Issues</h1>
       <p class="text-[#64748B]">Track and manage your project issues</p>
     </div>
 
@@ -107,6 +107,57 @@
         </div>
     </div> -->
 </section>
+
+<!-- Open the modal using ID.showModal() method -->
+<!-- <button class="btn" onclick="my_modal_5.showModal()">open modal</button> -->
+<dialog id="parts_modal" class="modal modal-bottom sm:modal-middle">
+  <div class="modal-box">
+    <div id="datails-container">
+     
+      <div class="card bg-white  rounded p-4 space-y-2">
+        <div>
+            <h1 class="font-semibold text-[20px]">Fix broken image uploads</h1>
+            <div class="flex gap-6">
+              <h1 class="text-white bg-[#00A96E] rounded font-semibold w-[65px] text-center">Opened</h1>
+            <li class="text-gray-500">Opened by Fahim Ahmed</li>
+            <li class="text-gray-500">22/02/2026</li>
+            </div>
+        </div>
+        <div class="flex gap-2">
+            <h1 class="text-[#EF4444] bg-[#FEECEC] rounded font-semibold w-[56px] text-center"><i class="fa-solid fa-bug w-[8px]"></i>Bug</h1>
+            <h1 class="text-[#D97706] bg-[#FEECEC] rounded font-semibold w-[112px] text-center"><i class="fa-solid fa-face-smile w-[8px]"></i>help wanted</h1>
+            
+        </div>
+        <div>
+          <p class="text-gray-500">The navigation menu doesn't collapse properly on mobile devices. Need to fix the responsive behavior.</p>
+        </div>
+     <div class="grid grid-cols-2 gap-6 text-center">
+
+  <div>
+    <p class="text-gray-500">Assignee:</p>
+    <p class="font-semibold">Fahim Ahmed</p>
+  </div>
+
+  <div>
+    <p class="text-gray-500">Priority</p>
+    <p class="font-semibold">High</p>
+  </div>
+
+  </div>
+        <!-- <div>
+            <h1 class="text-[#64748B]">#1 by john_doe</h1>
+            <p class="text-[#64748B]">1/15/2024</p>
+        </div> -->
+    </div>
+    </div>
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
 
 
     <script src="../script/home.js"></script>
