@@ -20,7 +20,7 @@
    
 </head>
 <body>
-    <header class="container w-4/12 mx-auto mt-[78px] shadow">
+    <header class="container w-4/12 mx-auto mt-[78px] my-[78px] shadow sm:w-8/12 md:w-6/12 lg:w-4/12 rounded">
         <div class=" p-6">
             <div class="text-center">
                 <img class="mx-auto py-4" src="./assets/github-logo.png" alt="">
@@ -33,9 +33,11 @@
 
                 <label class="label text-[14px]">Username</label>
                 <input id="userName" type="text" class="input w-full" placeholder="Enter Username" />
+                <p class="font-semibold text-[#4A00FF]">Default: admin</p>
 
                 <label class="label text-[14px]">Password</label>
                 <input id="passwordInput" type="password" class="input w-full" placeholder="Password" />
+                <p class="font-semibold text-[#4A00FF]">Default: admin123</p>
 
                 
                     <button id="loginBtn" class="btn btn-primary mt-4 w-full">Sign In</button>
