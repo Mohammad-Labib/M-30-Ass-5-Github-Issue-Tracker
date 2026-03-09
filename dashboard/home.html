@@ -32,11 +32,11 @@
       <div class="flex items-center">
         <label class="input validator join-item">
           <i class="fa-solid fa-magnifying-glass"></i>
-          <input type="text" placeholder="Search issues..." required />
+          <input id="input-search" type="text" placeholder="Search issues..." required />
         </label>
       </div>
 
-      <button class="btn btn-primary rounded font-bold">
+      <button id="btn-search" class="btn btn-primary rounded font-bold">
         <i class="fa-solid fa-plus"></i> New Issue
       </button>
     </div>
@@ -84,6 +84,11 @@
     
 
 </section>
+
+<section id="spinner" class="flex justify-center items-center py-10 hidden">
+  <span class="loading loading-spinner loading-xl"></span>
+</section>
+
 <!-- card part -->
 <section class="container mx-auto my-10  grid grid-cols-4 gap-4" id="card-container">
     <!-- <div class="card bg-white shadow rounded p-4 space-y-2 border-t-4 border-emerald-500">
@@ -158,6 +163,7 @@
     </div>
   </div>
 </dialog>
+
 
 
     <script src="../script/home.js"></script>
