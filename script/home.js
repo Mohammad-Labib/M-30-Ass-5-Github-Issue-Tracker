@@ -1,13 +1,16 @@
 
 let thisData = [];
 const loadingPart = () => {
+    manageSpinner(true);
     fetch("https://phi-lab-server.vercel.app/api/v1/lab/issues")
     .then((res) => res.json())
     .then((json) => {
         thisData = json.data; 
         displayCards(thisData); 
+        manageSpinner(false); 
     })
 };
+
 
 const manageSpinner = (status) => {
     if(status==true){
@@ -77,7 +80,12 @@ const displayInfo = (parts) => {
 const displayCards = (part) => {
    
     const cardContainer = document.getElementById("card-container");
+    const btnCount = document.getElementById("btnCount");
     cardContainer.innerHTML = ""; 
+
+    if(btnCount){
+        btnCount.innerText =`${part.length} Issues`;
+    }
 
     part.forEach(partOn => {
         const borderColor = partOn.status === 'open' ? 'border-emerald-500' : 'border-red-500';
@@ -95,8 +103,8 @@ const displayCards = (part) => {
                 <p class="text-[#64748B] text-sm">${partOn.description || 'No data found'}</p>
             </div>
             <div class="flex gap-2">
-                 <h1 class="text-[#EF4444] bg-[#FEECEC] rounded font-semibold px-2 text-[16px] text-center">Bug</h1>
-                 <h1 class="text-[#D97706] bg-[#FEECEC] rounded font-semibold px-2 text-[16px] text-center">help wanted</h1>
+                 <h1 class="text-[#EF4444] bg-[#FEECEC] rounded font-semibold px-2 text-[16px] text-center"><i class="fa-solid fa-bug w-[8px]"></i>Bug</h1>
+                 <h1 class="text-[#D97706] bg-[#FEECEC] rounded font-semibold px-2 text-[16px] text-center"><i class="fa-solid fa-face-smile w-[8px]"></i>help wanted</h1>
             </div>
             <hr class="text-[#64748B]" >
             <div>
@@ -112,9 +120,9 @@ const displayCards = (part) => {
 }
 
 
-document.getElementById('allBtn').addEventListener('click', () => {
-    displayCards(thisData); 
-});
+// document.getElementById('allBtn').addEventListener('click', () => {
+//     displayCards(thisData); 
+// });
 
 document.getElementById('openBtn').addEventListener('click', () => {
     const openData = thisData.filter(item => item.status === 'open');
@@ -182,3 +190,5 @@ document.getElementById("btn-search").addEventListener("click", () =>{
         displayCards(cardFilter);
     });
 });
+
+
